@@ -11,7 +11,6 @@ export class LoginPage {
         this.usernameField = page.locator('#id_login_email')
         this.passwordField = page.locator('#id_login_password')
         this.submitButton = page.locator('[type="submit"]')
-
     }
 
     async login() {
