@@ -33,8 +33,6 @@ export class LearnPage {
         await expect.soft(this.leftMenu, 'Side bar is not displayed').toBeVisible()
         await expect.soft(this.courses, 'Have not a started course').toHaveText('Моё обучение')
         await expect.soft(this.body, 'Body is not displayed').toBeVisible()
-
-
     }
 
     async openCourse() {
