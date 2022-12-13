@@ -1,13 +1,13 @@
 import {expect, Locator, Page} from "@playwright/test";
+import {MainPage} from "../mainPage/mainPage";
 
-export class CatalogPage {
-    private readonly page: Page
-    private readonly russianLanguageDropdown: Locator
-    private readonly englishLanguageDropdown: Locator
-    private readonly logoStepik: Locator
+export class CatalogPage extends MainPage {
+    protected readonly russianLanguageDropdown: Locator
+    protected readonly englishLanguageDropdown: Locator
+    protected readonly logoStepik: Locator
 
     constructor(page: Page) {
-        this.page = page
+        super(page, '')
         this.russianLanguageDropdown = page.locator('"Русский"')
         this.englishLanguageDropdown = page.locator('"English"').first()
         this.logoStepik = page.getByRole('link', {name: 'Stepik'})
