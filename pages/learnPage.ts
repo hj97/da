@@ -45,8 +45,6 @@ export class LearnPage {
         await expect.soft(this.sideBarContent, '.lesson-sidebar__content').toBeVisible()
         await this.sideBarHeader.click()
         await this.headerCourse.click()
-
-
     }
 }
 
