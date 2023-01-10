@@ -1,4 +1,4 @@
-import {CommonPage} from "../commonPage/commonPage";
+import {CommonPage} from "../common/commonPage";
 import {expect, Locator, Page} from "@playwright/test";
 
 export class MainPage extends CommonPage {

@@ -1,6 +1,6 @@
 import {LearnCoursesPage} from "../pages/learnCourses/learnCoursesPage";
 import {test} from "@playwright/test";
-import {LoginPage} from "../pages/loginPage";
+import {LoginPage} from "../pages/login/loginPage";
 import {CatalogPage} from "../pages/catalog/catalogPage";
 
 test('User can add new course and delete it', async ({page}) => {
@@ -18,4 +18,5 @@ test('User can add new course and delete it', async ({page}) => {
 
     const learnCoursesPage = new LearnCoursesPage(page)
     await learnCoursesPage.checkAllLearnCourses(expectedAllNameCourses)
+    await console.log(expectedAllNameCourses)
 })
